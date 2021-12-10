@@ -106,13 +106,13 @@ void loop() {
 void handleClick(int value, bool isCustom) {
   if (isCustom) {
     Serial.println("Click with: " + String(value));
-    timedMagnetSwitch(20, value, true, 8);
+    timedMagnetSwitch(20, value, true, 4);
   } else {
     if (value > 8) {
       Serial.println("Out of bounds!");
     } else {
       Serial.println("Click with: " + String(thres[value]));
-      timedMagnetSwitch(20, thres[value]+addVal, true, 8);
+      timedMagnetSwitch(20, thres[value]+addVal, true, 4);
     }
   }
 
